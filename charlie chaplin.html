@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARLIE CHAPLIN</title>
+</head>
+<body>
+    <div class="hat-1"></div>
+    <div class="hat-2"></div>
+    <div class="hat-3"></div>
+    <div class="hat-4"></div>
+    <div class="hair-1"></div>
+    <div class="hair-2"></div>
+    <div class="hair-3"></div>
+    <div class="face"></div>
+    <div class="eyebrow-left"></div>
+    <div class="eye-left-1"></div>
+    <div class="eye-left-2"></div>
+    <div class="eye-left-3"></div>
+    <div class="eyebrow-right"></div>
+    <div class="eye-right-1"></div>
+    <div class="eye-right-2"></div>
+    <div class="eye-right-3"></div>
+    <div class="nose"></div>
+    <div class="mustache-1"></div>
+    <div class="mustache-2"></div>
+    <div class="mouth-1"></div>
+    <div class="mouth-2"></div>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            overflow: hidden;
+        }
+        html *,body *{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            box-sizing: border-box;
+        }
+        html *:before,html *:after,
+        body *:before,body *:after{
+            content: "";
+            position: absolute;
+        }
+        .hat-1{
+            z-index: 2;
+            width: 10vmin;
+            height: 3.8vmin;
+            background: #000;
+            top: -15.5vmin;
+            left: -39vmin;
+            transform: rotate(15deg);
+            border-radius: 100%;
+        }
+        .hat-1::before{
+            width: 19vmin;
+            height: 2vmin;
+            background: #000;
+            top: 1vmin;
+            left: 8.2vmin;
+            transform: rotate(2deg);
+            box-shadow: 0.1vmin -2.4vmin 0 0.1vmin #000;
+        }
+        .hat-1::after{
+            width: 15vmin;
+            height: 4.7vmin;
+            background: #000;
+            top: -2.4vmin;
+            left: 34.8vmin;
+            transform: rotate(-4deg) skewX(-20deg);
+            border-radius: 79% 21% 48% 52% /
+            0% 55% 45% 100%;
+        }
+        .hat-2{
+            z-index: 2;
+            width: 14vmin;
+            height: 2vmin;
+            background: #000;
+            top: -0.4vmin;
+            left: 15vmin;
+            transform: rotate(13deg);
+        }
+        .hat-2::before{
+            width: 3vmin;
+            height: 6vmin;
+            background: #000;
+            top: -5.4vmin;
+            left: 15.5vmin;
+            transform: rotate(-75deg);
+        }
+        .hat-2::after{
+            width: 11vmin;
+            height: 3vmin;
+            background: #fff;
+            top: -3.2vmin;
+            left: 8.2vmin;
+            transform: rotate(-3deg) skewX(50deg);
+            border-radius: 0 0 100% 0;
+        }
+        .hat-3{
+            z-index: 2;
+            width: 33.8vmin;
+            height: 21vmin;
+            background: #000;
+            top: -37.5vmin;
+            left: 3vmin;
+            transform: skewX(-2deg);
+            border-radius: 35% 65% 0% 100% /
+            100% 56% 44% 0%;
+        }
+        .hat-3::before{
+            width: 15.5vmin;
+            height: 3vmin;
+            background: #000;
+            top: 25vmin;
+            left: 18.2vmin;
+            transform: rotate(10deg) skewX(-35deg) skewY(3deg);
+            border-radius: 0 0 100% 0;
+        }
+        .hat-3::after{
+            width: 13vmin;
+            height: 3vmin;
+            background: #000;
+            top: 25.2vmin;
+            left: 19.5vmin;
+            transform: rotate(12deg) skewX(-35deg)
+            skewY(3deg);
+            border-radius: 0 0 100% 0;
+        }
+        .hat-4{
+            z-index: 3;
+            width: 30vmin;
+            height: 15vmin;
+            background: #000;
+            top: -23vmin;
+            left: 6.5vmin;
+            border-radius: 0 1vmin 0 65%;
+        }
+        .hat-4::before{
+            width: 8vmin;
+            height: 1.5vmin;
+            background: #000;
+            top: 14.8vmin;
+            left: 21.9vmin;
+            transform: skewX(-10deg);
+            border-radius: 0 0.2vmin 0 0;
+        }
+        .hair-1{
+            width: 36vmin;
+            height: 6vmin;
+            background: #000;
+            top: 3vmin;
+            transform: rotate(20deg) skewX(-25deg);
+            border-radius: 0 1vmin 0 0;
+        }
+        .hair-1::before{
+            width: 20vmin;
+            height: 5vmin;
+            background: #000;
+            top: -1vmin;
+            left: 15.8vmin;
+            transform: rotate(-14deg) skewX(5deg);
+            border-radius: 0 0 1vmin 0;
+        }
+        .hair-1::after{
+            width: 2vmin;
+            height: 5vmin;
+            background: #000;
+            top: 2vmin;
+            left: -6vmin;
+            transform: rotate(-20deg) skewX(20deg) skewY(-50deg);
+        }
+        .hair-2{
+            width: 5vmin;
+            height: 5.5vmin;
+            background: #000;
+            top: -2.4vmin;
+            left: -43vmin;
+            border-radius: 0 0 0 90%;
+            box-shadow: 3vmin -2.4vmin 0 1vmin #000;
+        }
+        .hair-2::before{
+            width: 5vmin;
+            height: 10vmin;
+            background: #000;
+            left: 4vmin;
+            transform: rotate(20deg);
+        }
+        .hair-2::after{
+            width: 4vmin;
+            height: 4vmin;
+            background: #000;
+            top: 4.9vmin;
+            left: 2.3vmin;
+            border-radius: 0 0 0 1vmin;
+        }
+        .hair-3{
+            width: 0;
+            height: 0;
+            border-top: 4vmin solid transparent;
+            border-bottom: 6.6vmin solid transparent;
+            border-left: 3.5vmin solid #000;
+            top: 17vmin;
+            left: -35.6vmin;
+            transform: rotate(-25deg);
+        }
+        .hair-3::before{
+            width: 0;
+            height: 0;
+            border-top: 0.6vmin solid transparent;
+            border-bottom: 0.6vmin solid transparent;
+            border-right: 2vmin solid #000;
+            top: -4.9vmin;
+            left: -5vmin;
+            transform: rotate(10deg);
+        }
+        .hair-3::after{
+            width: 0;
+            height: 0;
+            border-top: 0.6vmin solid transparent;
+            border-bottom: 0.6vmin solid transparent;
+            border-right: 2vmin solid #000;
+            top: -3.9vmin;
+            left: -5vmin;
+            transform: rotate(26deg);
+        }
+        .face{
+            z-index: 2;
+            width: 25vmin;
+            height: 4vmin;
+            background: #fff;
+            top: 5vmin;
+            left: -4.3vmin;
+            transform: rotate(13deg) skewY(1deg);
+            border-radius: 100%;
+        }
+        .face::before{
+            width: 20vmin;
+            height: 4vmin;
+            background: #fff;
+            top: 1.1vmin;
+            left: 15vmin;
+            transform: skewY(10deg);
+            border-radius: 100%;
+            box-shadow: -1vmin 2vmin 0 0.1vmin #fff;
+        }
+        .eyebrow-left{
+            z-index: 2;
+            width: 8.5vmin;
+            height: 5vmin;
+            background: #000;
+            top: 12.1vmin;
+            left: -19vmin;
+            border-radius: 47% 53% 48% 52% / 93% 49% 51% 7%;
+        }
+        .eyebrow-left::before{
+            width: 5vmin;
+            height: 2vmin;
+            background: #fff;
+            top: 3.1vmin;
+            left: -0.1vmin;
+            transform: rotate(-28deg);
+            border-radius: 100%;
+        }
+        .eyebrow-left::after{
+            width: 5.3vmin;
+            height: 2vmin;
+            background: #fff;
+            top: 2vmin;
+            left: 3.5vmin;
+            transform: rotate(-3deg);
+            border-radius: 100%;
+            box-shadow: -1vmin 1vmin 0 0.4vmin #fff;
+        }
+        .eye-left-1{
+            z-index: 2;
+            width: 8.8vmin;
+            height: 5.1vmin;
+            background: #000;
+            top: 21vmin;
+            left: -17.5vmin;
+            border-radius: 50% 50% 54% 46% / 80% 61% 39% 20%;
+        }
+        .eye-left-1::before{
+            width: 11vmin;
+            height: 3vmin;
+            background: #fff;
+            top: 2.9vmin;
+            left: -1vmin;
+            transform: rotate(-3deg);
+        }
+        .eye-left-1::after{
+            width: 4.8vmin;
+            height: 2.2vmin;
+            background: #000;
+            top: 2.8vmin;
+            left: 0.1vmin;
+            transform: rotate(3deg);
+            border-radius: 0 0 0 100%;
+        }
+        .eye-left-2{
+            z-index: 2;
+            width: 4vmin;
+            height: 2vmin;
+            background: #000;
+            top: 22.4vmin;
+            left: -13vmin;
+            transform: rotate(2deg);
+            border-radius: 0 0 100% 0;
+            box-shadow: -2vmin 0 0 0.1vmin #000;
+        }
+        .eye-left-2::before{
+            width: 2vmin;
+            height: 2vmin;
+            background: #000;
+            top: 1.1vmin;
+            left: -0.5vmin;
+            transform: rotate(16deg);
+            border-radius: 0 0 100% 0;
+        }
+        .eye-left-3{
+            z-index: 2;
+            width: 2.9vmin;
+            height: 2.5vmin;
+            background: #fff;
+            top: 22.1vmin;
+            left: -17.6vmin;
+            border-radius: 50%;
+        }
+        .eye-left-3::before{
+            width: 1.4vmin;
+            height: 1.4vmin;
+            top: 0.7vmin;
+            left: 2vmin;
+            transform: rotate(45deg);
+            border-radius: 0 0 0 0.6vmin;
+        }
+        .eyebrow-right{
+            z-index: 2;
+            width: 8.5vmin;
+            height: 5vmin;
+            background: #000;
+            top: 12.2vmin;
+            left: 12vmin;
+            transform: rotate(2deg) skewX(-4deg);
+            border-radius: 49% 51% 0% 100% / 70% 71% 29% 30%;
+        }
+        .eyebrow-right::before{
+            width: 6vmin;
+            height: 3vmin;
+            background: #fff;
+            top: 2.7vmin;
+            transform: rotate(-3deg);
+            border-radius: 0.5vmin 0.2vmin 0 0;
+        }
+        .eyebrow-right::after{
+            width: 5vmin;
+            height: 8vmin;
+            background: #fff;
+            top: 1.9vmin;
+            left: 4.5vmin;
+            transform: rotate(-44deg);
+            border-radius: 0 50% 0 0
+        }
+        .eye-right-1{
+            z-index: 2;
+            width: 8.9vmin;
+            height: 5.1vmin;
+            background: #000;
+            top: 20.2vmin;
+            left: 12vmin;
+            transform: rotate(2deg);
+            border-radius: 50% 50% 25% 65% /
+            45% 70% 30% 55%;
+        }
+        .eye-right-1::before{
+            width: 5vmin;
+            height: 3vmin;
+            background: #fff;
+            top: 2.8vmin;
+            left: 4.2vmin;
+            transform: rotate(-10deg);
+            border-radius: 100% 0 0 0;
+        }
+        .eye-right-1::after{
+            width: 4.3vmin;
+            height: 2.5vmin;
+            background: #000;
+            top: 2.3vmin;
+            left: 4.3vmin;
+            transform: rotate(-6deg) skewX(-6deg);
+            border-radius: 0 0 100% 0;
+        }
+        .eye-right-2{
+            z-index: 2;
+            width: 2.8vmin;
+            height: 2.4vmin;
+            background: #fff;
+            top: 20.8vmin;
+            left: 9.5vmin;
+            border-radius: 1.4vmin 0.6vmin 0.4vmin 1.5vmin;
+        }
+        .nose{
+            width: 3vmin;
+            height: 1.6vmin;
+            background: #000;
+            top: 40.2vmin;
+            left: -6.4vmin;
+            transform: rotate(30deg);
+            border-radius: 1vmin 100% 1vmin 1vmin;
+        }
+        .nose::before{
+            width: 2vmin;
+            height: 0.6vmin;
+            background: #fff;
+            top: 1.5vmin;
+            left: 0.3vmin;
+            transform: rotate(-20deg);
+            border-radius: 0 0.3vmin 100% 0;
+        }
+        .nose::after{
+            width: 2.8vmin;
+            height: 1.5vmin;
+            background: #000;
+            top: -2.8vmin;
+            left: 3.9vmin;
+            transform: rotate(-30deg) skewX(-5deg);
+        }
+        .mustache-1{
+            width: 9.5vmin;
+            height: 2vmin;
+            background: #000;
+            top: 48.2vmin;
+            left: -1.4vmin;
+            transform: rotate(-1deg);
+            border-radius: 100%;
+        }
+        .mustache-1::before{
+            width: 4vmin;
+            height: 3vmin;
+            background: #000;
+            top: -2vmin;
+            border-radius: 2.5vmin 0 0 0;
+        }
+        .mustache-1::after{
+            width: 4.4vmin;
+            height: 1.5vmin;
+            background: #000;
+            top: -1.5vmin;
+            left: 6vmin;
+            transform: rotate(40deg);
+            border-radius: 0 3vmin 0 0;
+        }
+        .mustache-2{
+            width: 4vmin;
+            height: 1vmin;
+            background: #000;
+            top: 41.5vmin;
+            left: -1vmin;
+        }
+        .mustache-2::before{
+            width: 2.2vmin;
+            height: 0.5vmin;
+            background: #fff;
+            top: -0.3vmin;
+            left: 0.4vmin;
+            border-radius: 0 0 2vmin 0;
+        }
+        .mustache-2::after{
+            width: 5vmin;
+            height: 3vmin;
+            background: #000;
+            top: 1vmin;
+            left: 0.4vmin;
+            border-radius: 0 2vmin 0 0;
+        }
+        .mouth-1{
+            width: 10.7vmin;
+            height: 1.2vmin;
+            background: #000;
+            top: 52.2vmin;
+            left: -0.3vmin;
+            transform: skewX(-45deg);
+            border-radius: 50% 50% 0 0;
+        }
+        .mouth-1::after{
+            width: 4vmin;
+            height: 0.7vmin;
+            background: #000;
+            top: 0.7vmin;
+            left: 4.8vmin;
+            transform: skewX(45deg);
+            border-radius: 100%;
+        }
+        .mouth-2{
+            width: 0;
+            height: 0;
+            border-top: 0.7vmin solid transparent;
+            border-bottom: 0.7vmin solid transparent;
+            border-right: 3.5vmin solid #000;
+            top: 57vmin;
+            left: -4.3vmin;
+        }
+        .mouth-2::before{
+            width: 0;
+            height: 0;
+            border-top: 0.7vmin solid transparent;
+            border-bottom: 0.7vmin solid transparent;
+            border-left: 3.5vmin solid #000;
+            top: -0.7vmin;
+            left: 3.4vmin;
+        }
+    </style>
+</body>
+</html>
